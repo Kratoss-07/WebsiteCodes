@@ -1,0 +1,130 @@
+
+<html>
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="WebSiteFrontPage.html">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="WebSiteFrontPage.html">Home</a></li>
+      <li><a href="Users.html">UsersProfiiles </a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="registration/regiser.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="registration/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="header">
+  <h1>Sier the art</h1>
+</div>
+
+<div class="row">
+  <div class="column side">
+  <a><form action="Upload.php" method="POST" enctype="multipart/form-data">
+  <input type="file" name="File">
+  <button type="submit" name="submit">UPLOAD</button>
+  </a>
+  </form>
+    </div>
+  
+  <div class="column middle">
+<a href="Picture.html">town</a>
+<a href="Picture2.html">Cat</a>
+    </div>
+  
+  <div class="column side">
+    <h4>User Pictures</h4>
+  </div>
+</div>
+
+<div class="footer">
+  <p>project test version</p>
+</div>
+  
+</body>
+</html>
